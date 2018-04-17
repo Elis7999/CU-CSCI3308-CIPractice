@@ -1,6 +1,6 @@
-# Andy Sayler
-# CI Practice
-# Summer 2014
+ # Eliott Ishak , claire Martin
+ # CSCI 3308
+ # Spring 2018
 
 CC = gcc
 CFLAGS = -c -g -Wall -Wextra
@@ -9,7 +9,7 @@ LFLAGS = -g -Wall -Wextra
 PKG_MATH_LIBS = -lm
 PKG_CHECK_LIBS = `pkg-config --libs check`
 
-.PHONY: all dep clean test
+.PHONY: all dep clean
 
 all: geometry_test
 
@@ -29,7 +29,5 @@ clean:
 	$(RM) *.o
 	$(RM) geometry_test
 	$(RM) *~
-
-test: 
-	  geometry_test
+test: geometry_test
 	./geometry_test
